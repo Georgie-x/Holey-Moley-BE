@@ -65,16 +65,16 @@ const seed = ({ usersData, showsData, castData, gamesData, resultsData }) => {
       CREATE TABLE results (
         game_id SERIAL INT PRIMARY KEY,
         username INT REFERENCES users(username),
-        A1_char_id INT,
-        A2_char_id INT,
-        A3_char_id INT,
-        A4_char_id INT,
-        A5_char_id INT,
-        A6_char_id INT,
-        A7_char_id INT,
-        A8_char_id INT,
-        A9_char_id INT,
-        A10_char_id INT,
+        A1_score INT,
+        A2_score INT,
+        A3_score INT,
+        A4_score INT,
+        A5_score INT,
+        A6_score INT,
+        A7_score INT,
+        A8_score INT,
+        A9_score INT,
+        A10_score INT,
         );`);
 		});
 };
