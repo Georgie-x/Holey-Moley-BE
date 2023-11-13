@@ -1,7 +1,7 @@
 {
   "name": "holey-moley-be",
   "version": "1.0.0",
-  "description": "Hello from Georgie",
+  "description": "Holey-Moley",
   "main": "index.js",
   "scripts": {
     "test": "jest",
