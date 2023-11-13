@@ -22,5 +22,10 @@
     "jest-sorted": "^1.0.14",
     "pg-format": "^1.0.4",
     "supertest": "^6.3.3"
-  }
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended/all",
+      "jest-sorted"
+    ]
 }
