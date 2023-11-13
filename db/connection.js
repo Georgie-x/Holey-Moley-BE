@@ -18,4 +18,3 @@ if(ENV === 'production') {
 
 module.exports = new Pool(config);
 
-.env.development (PGDATABASE=nc_news) .env.test (PGDATABASE=nc_news_test)
