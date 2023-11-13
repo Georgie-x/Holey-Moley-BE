@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Holey-Moley",
   "main": "index.js",
-
   "scripts": {
     "test": "jest",
+    "setup-dbs": "psql -f ./db/setup.sql",
+    "seed": "node ./db/seeds/run-seed.js",
     "helper": "psql -f ./db/helper.sql > helper.txt"
   },
   "author": "",
@@ -14,7 +15,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "pg": "^8.11.3"
+    "pg": "^8.11.3",
+    "pg-pool": "^3.6.1"
   },
   "devDependencies": {
     "axios": "^1.6.1",
@@ -29,4 +31,5 @@
       "jest-extended/all",
       "jest-sorted"
     ]
-}}
+  }
+}

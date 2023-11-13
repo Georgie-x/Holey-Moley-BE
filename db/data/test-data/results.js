@@ -1,4 +1,4 @@
-module.exports[
+module.exports = [
     {
         game_id: "the-simpsons-1",
         username: Flo,

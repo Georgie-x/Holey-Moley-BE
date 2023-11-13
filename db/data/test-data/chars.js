@@ -1,4 +1,4 @@
-module.exports[
+module.exports = [
 	{
 		show_id: 82,
 		person_img_url: "https://www.tvmaze.com/people/14072/peter-dinklage",

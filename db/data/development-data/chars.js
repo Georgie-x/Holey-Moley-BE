@@ -1,5 +1,5 @@
-module.exports[
-	({
+module.exports = [
+	{
 		show_id: 269,
 		person_img_url: "https://www.tvmaze.com/people/37465/cillian-murphy",
 		person_name: "Cillian Murphy",
@@ -1961,5 +1961,5 @@ module.exports[
 		char_id: 16580,
 		char_img_url:
 			"https://www.tvmaze.com/characters/16580/the-simpsons-dr-marvin-monroe",
-	})
+	}
 ];

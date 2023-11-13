@@ -1,4 +1,4 @@
-module.exports[
+module.exports = [
     {
         game_id: "the_simpsons-1",
         show_id: 83,

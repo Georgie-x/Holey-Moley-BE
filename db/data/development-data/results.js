@@ -1,7 +1,7 @@
-module.exports[
+module.exports = [
     {
         game_id: "the-simpsons-1",
-        username: Flo,
+        username: 'Flo',
         A1_score: 165,
         A2_score: 165,
         A3_score: 4000,
@@ -16,7 +16,7 @@ module.exports[
     },
     {
         game_id: "game-of-thrones-1",
-        username: Flo,
+        username: 'Flo',
         A1_score: 0,
         A2_score: 617,
         A3_score: 150,
@@ -31,7 +31,7 @@ module.exports[
     },
     {
         game_id: "the-simpsons-1",
-        username: Christopher,
+        username: 'Christopher',
         A1_score: 89,
         A2_score: 0,
         A3_score: 0,

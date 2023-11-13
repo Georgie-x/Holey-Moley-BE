@@ -1,4 +1,4 @@
-module.exports[
+module.exports = [
     {
         show_id: 82,
         show_name: "Game of Thrones",
