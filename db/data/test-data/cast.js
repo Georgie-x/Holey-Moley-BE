@@ -1,4 +1,4 @@
-[
+module.exports[
 	{
 		show_id: 82,
 		person_img_url: "https://www.tvmaze.com/people/14072/peter-dinklage",
@@ -955,5 +955,5 @@
 		char_id: 16580,
 		char_img_url:
 			"https://www.tvmaze.com/characters/16580/the-simpsons-dr-marvin-monroe",
-	},
+	}
 ];
