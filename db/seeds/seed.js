@@ -76,7 +76,53 @@ const seed = ({ usersData, showsData, castData, gamesData, resultsData }) => {
         A9_score INT,
         A10_score INT,
         );`);
+		})
+		.then(() => {
+			const insertUsers = format(
+				`INSERT INTO users (username, logged_in) VALUES %L`,
+				usersData.map(({ username, logged_in }) => [username, logged_in])
+			);
+			return db.query(insertUsers);
+		})
+		.then(() => {
+			const insertShows = format(
+				`INSERT INTO shows (show_id, show_name, show_img_url) VALUES %L`,
+				showsData.map(({ show_id, show_name, show_img_url }) => [
+					show_id,
+					show_name,
+					show_img_url,
+				])
+			);
+			return db.query(insertShows);
+		})
+		.then(() => {
+			const insertCast = format(
+				`INSERT INTO cast (show_id, person_img_url, person_name, person_id, char_name, char_id, char_img_url) VALUES %L`,
+				castData.map(
+					({
+            show_id, person_img_url, person_name, person_id, char_name, char_id, char_img_url
+					}) => [
+						show_id, person_img_url, person_name, person_id, char_name, char_id, char_img_url
+					]
+				)
+			);
+			return db.query(insertCast);
+		})
+		.then(() => {
+			const insertGames = format(
+				`INSERT INTO games (username, logged_in) VALUES %L`,
+				gamesData.map(({ username, logged_in }) => [username, logged_in])
+			);
+			return db.query(insertGames);
+		})
+		.then(() => {
+			const insertResults = format(
+				`INSERT INTO results (username, logged_in) VALUES %L`,
+				resultsData.map(({ username, logged_in }) => [username, logged_in])
+			);
+			return db.query(insertResults);
 		});
 };
 
 module.exports = seed;
+
