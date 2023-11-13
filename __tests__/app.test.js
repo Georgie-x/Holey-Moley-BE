@@ -36,21 +36,17 @@ afterAll(() => {
 //     })
 // })
 
-// describe('GET /api/topics', () => {
-//     test('should return a status code of 200 and topics array', () => {
-//         return request(app)
-//         .get("/api/topics")
-//         .expect(200)
-//         .then(({ body }) => {  
-//             expect(body.topics).toHaveLength(3)
-//             body.topics.forEach((topic) => {
-//             expect(typeof topic.slug).toBe("string")
-//             expect(typeof topic.description).toBe("string")
-        
-//             })   
-//         })  
-//     })
-// })
+describe('GET /api/users', () => {
+    test.only('should return a status code of 200 and topics array', () => {
+        return request(app)
+        .get("/api/topics")
+        .expect(200)
+        .then(({ body }) => {  
+           console.log(body)
+            })   
+        })  
+    })
+
 
 // describe('GET /api/articles/:article_id', () => {
 

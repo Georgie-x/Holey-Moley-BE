@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Holey-Moley",
   "main": "index.js",
+
   "scripts": {
     "test": "jest",
     "helper": "psql -f ./db/helper.sql > helper.txt"
@@ -28,4 +29,5 @@
       "jest-extended/all",
       "jest-sorted"
     ]
+}
 }
