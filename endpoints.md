@@ -1,4 +1,6 @@
 
+
+
  1. user arrives on home page - text input box for username and submit button
         check if valid username
         check if username on db
