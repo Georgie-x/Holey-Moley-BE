@@ -1,10 +1,11 @@
 {
   "name": "holey-moley-be",
   "version": "1.0.0",
-  "description": "Hello from Georgie",
+  "description": "Holey-Moley",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "helper": "psql -f ./db/helper.sql > helper.txt"
   },
   "author": "",
   "license": "ISC",
@@ -15,10 +16,16 @@
     "pg": "^8.11.3"
   },
   "devDependencies": {
+    "axios": "^1.6.1",
     "jest": "^29.7.0",
     "jest-extended": "^4.0.2",
     "jest-sorted": "^1.0.14",
     "pg-format": "^1.0.4",
     "supertest": "^6.3.3"
-  }
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended/all",
+      "jest-sorted"
+    ]
 }
