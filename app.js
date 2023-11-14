@@ -5,6 +5,7 @@ const { exists } = require("fs")
 const { getAllUsers } = require("./controller/getAllUsers.controller")
 const { patchUser } = require("./controller/patchUser.controller")
 const { addNewUser } = require("./controller/addNewUser.controller")
+const { getCharacters } = require("./controller/getCharacters.controller")
 
 
 
@@ -14,5 +15,11 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/api/users/', getAllUsers)
+app.get('/api/characters', getCharacters)
+
 app.patch('/api/users/:username', patchUser)
+
 app.post('/api/users/:username', addNewUser)
+
+
+module.exports =app

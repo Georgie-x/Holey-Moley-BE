@@ -37,15 +37,25 @@ afterAll(() => {
 // })
 
 describe('GET /api/users', () => {
-    test.skip('should return a status code of 200 and topics array', () => {
+    test.skip('should return all users', () => {
         return request(app)
-        .get("/api/topics")
+        .get("/api/users")
         .expect(200)
         .then(({ body }) => {  
            console.log(body)
             })   
         })  
     })
+describe('GET /api/chars', ()=>{
+    test.only('should return all chars', ()=>{
+        return request(app)
+        .get("/api/characters")
+        .expect(200)
+        .then(({body})=>{
+            console.log(body)
+        })
+    })
+})
 
 
 // describe('GET /api/articles/:article_id', () => {
