@@ -6,7 +6,8 @@
 
   "scripts": {
     "test": "jest",
-    "helper": "psql -f ./db/helper.sql > helper.txt"
+    "helper": "psql -f ./db/helper.sql > helper.txt",
+    "playground": "psql -f ./db/holey-moley-test.sql > playground.txt"
   },
   "author": "",
   "license": "ISC",
