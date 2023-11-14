@@ -211,26 +211,6 @@ module.exports = [
 	},
 	{
 		show_id: 269,
-		person_img_url: "https://www.tvmaze.com/people/8534/neil-maskell",
-		person_name: "Neil Maskell",
-		person_id: 8534,
-		char_name: "Winston Churchill",
-		char_id: 60714,
-		char_img_url:
-			"https://www.tvmaze.com/characters/60714/peaky-blinders-winston-churchill",
-	},
-	{
-		show_id: 269,
-		person_img_url: "https://www.tvmaze.com/people/46518/andy-nyman",
-		person_name: "Andy Nyman",
-		person_id: 46518,
-		char_name: "Winston Churchill",
-		char_id: 60714,
-		char_img_url:
-			"https://www.tvmaze.com/characters/60714/peaky-blinders-winston-churchill",
-	},
-	{
-		show_id: 269,
 		person_img_url: "https://www.tvmaze.com/people/5665/charlie-murphy",
 		person_name: "Charlie Murphy",
 		person_id: 5665,
@@ -1541,16 +1521,6 @@ module.exports = [
 		person_img_url: "https://www.tvmaze.com/people/14858/hank-azaria",
 		person_name: "Hank Azaria",
 		person_id: 14858,
-		char_name: "Carl Carlson",
-		char_id: 16571,
-		char_img_url:
-			"https://www.tvmaze.com/characters/16571/the-simpsons-carl-carlson",
-	},
-	{
-		show_id: 83,
-		person_img_url: "https://www.tvmaze.com/people/25931/alex-desert",
-		person_name: "Alex Désert",
-		person_id: 25931,
 		char_name: "Carl Carlson",
 		char_id: 16571,
 		char_img_url:

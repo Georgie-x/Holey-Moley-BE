@@ -63,7 +63,8 @@ const seed = ({ userData, showData, charData, gameData, resultData }) => {
 		.then(() => {
 			return db.query(`
       CREATE TABLE results (
-        game_id VARCHAR PRIMARY KEY,
+        result_id SERIAL PRIMARY KEY,
+        game_id VARCHAR,
         username VARCHAR REFERENCES users(username),
         A1_score INT,
         A2_score INT,
