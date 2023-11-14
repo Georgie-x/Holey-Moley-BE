@@ -2,7 +2,6 @@ const express = require("express")
 const app = express()
 const cors = require("cors")
 const { exists } = require("fs")
-
 const { getAllUsers } = require("./controllers/getAllUsers.controller")
 const { patchUser } = require("./controllers/patchUser.controller")
 const { addNewUser } = require("./controllers/addNewUser.controller")
