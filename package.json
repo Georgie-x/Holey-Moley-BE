@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+
     "setup-dbs": "psql -f ./db/setup.sql",
     "seed": "node ./db/seeds/run-seed.js",
     "helper": "psql -f ./db/helper.sql > helper.txt"
+
   },
   "author": "",
   "license": "ISC",

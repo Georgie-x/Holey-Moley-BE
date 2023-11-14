@@ -3,6 +3,7 @@ const db = require("../connection");
 
 
 
+
 const seed = ({ userData, showData, charData, gameData, resultData }) => {
 	return db
 		.query(`DROP TABLE IF EXISTS results`)
@@ -216,6 +217,8 @@ const seed = ({ userData, showData, charData, gameData, resultData }) => {
 		}).catch((err) => {
 console.log(err)
     })
+
 };
+
 
 module.exports = seed;
