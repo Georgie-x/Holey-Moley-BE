@@ -1,4 +1,4 @@
-You are now connected to database "holey_moley" as user "nelly".
+You are now connected to database "holey_moley" as user "admin".
   username   | logged_in 
 -------------+-----------
  John        | f
