@@ -6,7 +6,7 @@ const { exists } = require("fs")
 const { getAllUsers } = require("./controllers/getAllUsers.controller")
 const { patchUser } = require("./controllers/patchUser.controller")
 const { addNewUser } = require("./controllers/addNewUser.controller")
-const { getAllShows} = require("./controllers/shows.controller")
+const { getAllShows, getShow} = require("./controllers/shows.controller")
 const { getCharacters } = require("./controller/getCharacters.controller")
 
 
@@ -27,6 +27,7 @@ app.post('/api/users/:username', addNewUser)
 
 
 app.get('/api/shows/', getAllShows)
+app.get('/api/shows/:show_id', getShow)
 
 
 

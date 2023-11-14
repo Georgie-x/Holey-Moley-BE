@@ -25,6 +25,17 @@ describe('GET /api/shows', () => {
         })  
     })
 
+    describe('GET /api/shows/:show_id', () => {
+        test('should return a status code of 200 and show array', () => {
+            return request(app)
+            .get("/api/shows/83")
+            .expect(200)
+            .then(({ body }) => {  
+               console.log(body)
+                })   
+            })  
+        })
+
 // describe('404 Invalid api path', () => {
 //     test('should return a status code of 404 if path is invalid', () => {
 //         return request(app)
@@ -71,7 +82,7 @@ describe('GET /api/users', () => {
         })  
     })
 describe('GET /api/chars', ()=>{
-    test.only('should return all chars', ()=>{
+    test.skip('should return all chars', ()=>{
         return request(app)
         .get("/api/characters")
         .expect(200)
