@@ -28,7 +28,7 @@ exports.castSearch = (show_id) => {
 					char_id: castMember.character.id,
 					char_img_url: castMember.character.url}
 			});
-			console.log("answer", answer);
+			return answer
 		});
 };
 

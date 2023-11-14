@@ -13,6 +13,18 @@ afterAll(() => {
     db.end()
 })
 
+
+describe('GET /api/shows', () => {
+    test('should return a status code of 200 and shows array', () => {
+        return request(app)
+        .get("/api/shows")
+        .expect(200)
+        .then(({ body }) => {  
+           console.log(body)
+            })   
+        })  
+    })
+
 // describe('404 Invalid api path', () => {
 //     test('should return a status code of 404 if path is invalid', () => {
 //         return request(app)
@@ -36,6 +48,18 @@ afterAll(() => {
 //     })
 // })
 
+
+// describe('GET /api/users', () => {
+//     test.skip('should return a status code of 200 and topics array', () => {
+//         return request(app)
+//         .get("/api/topics")
+//         .expect(200)
+//         .then(({ body }) => {  
+//            console.log(body)
+//             })   
+//         })  
+//     })
+
 describe('GET /api/users', () => {
     test.skip('should return all users', () => {
         return request(app)
@@ -56,6 +80,7 @@ describe('GET /api/chars', ()=>{
         })
     })
 })
+
 
 
 // describe('GET /api/articles/:article_id', () => {
