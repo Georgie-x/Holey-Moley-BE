@@ -9,5 +9,4 @@ exports.patchUser=(username)=>{
         console.log(rows[0])
         return rows[0]
     })
-    
 }
