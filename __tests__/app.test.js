@@ -36,6 +36,18 @@ describe('GET /api/shows', () => {
             })  
         })
 
+describe('GET /api/results', () => {
+        test('should return a status code of 200 and results array', () => {
+            return request(app)
+            .get("/api/results")
+            .expect(200)
+            .then(({ body }) => {  
+               console.log(body)
+                })  
+    });
+    
+});
+
 // describe('404 Invalid api path', () => {
 //     test('should return a status code of 404 if path is invalid', () => {
 //         return request(app)
