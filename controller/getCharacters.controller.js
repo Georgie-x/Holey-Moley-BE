@@ -1,4 +1,4 @@
-const { getCharacters } = require("../model/getCharacters.model")
+const { getCharacters } = require("../models/getCharacters.model")
 
 exports.getCharacters=(req, res)=>{
     return getCharacters()
