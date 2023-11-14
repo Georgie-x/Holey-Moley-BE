@@ -30,7 +30,7 @@ app.get('/api/shows/:show_id', getShow)
 
 app.get('/api/characters', getCharacters)
 
-app.get('/api/results/', getAllResults)
+// app.get('/api/results/', getAllResults)
 
 
 
