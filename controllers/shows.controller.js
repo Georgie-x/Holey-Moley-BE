@@ -1,4 +1,4 @@
-const { fetchAllShows, fetchShow } = require("../models/shows.model");
+const { fetchAllShows, fetchShowById } = require("../models/shows.model");
 
 exports.getAllShows = async (req, res, next) => {
 	try {
@@ -9,11 +9,10 @@ exports.getAllShows = async (req, res, next) => {
 	}
 };
 
-exports.getShow = async (req, res, next) => {
-	console.log("incont")
+exports.getShowById = async (req, res, next) => {
 	try { 
 		const { show_id } = req.params
-		const shows = await fetchShow( show_id);
+		const shows = await fetchShowById( show_id);
 		return res.status(200).send({ shows });
 	} catch (err) {
 		next(err);

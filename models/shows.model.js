@@ -13,7 +13,7 @@ const fetchAllShows = async () => {
     }
 }
 
-const fetchShow = async (show_id) => {
+const fetchShowById = async (show_id) => {
     const query = `SELECT * FROM shows WHERE show_id = $1`   
     const body = await db.query(query, [show_id])
     if (body.rows.length === 0) {
@@ -23,4 +23,7 @@ const fetchShow = async (show_id) => {
     }        
 }
 
-module.exports = {fetchAllShows, fetchShow}
+
+
+
+module.exports = {fetchAllShows, fetchShowById}
