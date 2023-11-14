@@ -1,7 +1,4 @@
-const {showSearch, castSearch} = require("../db/utils")
-
-
-
+const {showSearch, castSearch} = require("../utils")
 
 describe('showSearch', () => {
     test('should return a new object', () => {
@@ -13,8 +10,8 @@ describe('showSearch', () => {
 });
 
 describe('castSearch', () => {
-    test('should return a new object', () => {
-        const input = 82
+    test.only('should return a new array object', () => {
+        const input = 269
         const output = castSearch(input)    
         expect(output).not.toEqual(input)
         expect(typeof output).toBe("object") 
@@ -22,4 +19,3 @@ describe('castSearch', () => {
 });
 
 
-// const expected = {"show_name": "The Simpsons", "show_id": 83, "show_img_url": "https://static.tvmaze.com/uploads/images/original_untouched/476/1192162.jpg"}

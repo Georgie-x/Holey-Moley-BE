@@ -1,4 +1,4 @@
-module.exports[
+module.exports = [
 {
     username: 'John',
     logged_in: false,
@@ -10,17 +10,17 @@ module.exports[
     
 },
 {
-    username: "Flo",
+    username: 'Flo',
     logged_in: true,
     
 },
 {
-    username: "Christopher",
+    username: 'Christopher',
     logged_in: true,
     
 },
 {
-    username: "Chris",
+    username: 'Chris',
     logged_in: false,
     
 }

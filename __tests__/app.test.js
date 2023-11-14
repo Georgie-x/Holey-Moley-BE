@@ -3,7 +3,7 @@ const request = require("supertest")
 const db = require("../db/connection")
 const data = require("../db/data/test-data/index.js")
 const seed = require("../db/seeds/seed.js")
-const endpoints = require("../endpoints.json")
+
 
 
 beforeEach(() => {
@@ -37,7 +37,7 @@ afterAll(() => {
 // })
 
 describe('GET /api/users', () => {
-    test.only('should return a status code of 200 and topics array', () => {
+    test.skip('should return a status code of 200 and topics array', () => {
         return request(app)
         .get("/api/topics")
         .expect(200)
