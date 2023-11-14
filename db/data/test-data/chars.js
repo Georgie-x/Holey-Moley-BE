@@ -530,16 +530,7 @@ module.exports = [
 		char_img_url:
 			"https://www.tvmaze.com/characters/16582/the-simpsons-seymour-skinner",
 	},
-	{
-		show_id: 83,
-		person_img_url: "https://www.tvmaze.com/people/14858/hank-azaria",
-		person_name: "Hank Azaria",
-		person_id: 14858,
-		char_name: "Carl Carlson",
-		char_id: 16571,
-		char_img_url:
-			"https://www.tvmaze.com/characters/16571/the-simpsons-carl-carlson",
-	},
+	
 	{
 		show_id: 83,
 		person_img_url: "https://www.tvmaze.com/people/14854/dan-castellaneta",

@@ -92,6 +92,17 @@ describe('GET /api/chars', ()=>{
     })
 })
 
+describe ('GET /api/characters/:show_id/:num', ()=>{
+    test.only('should return 5', ()=>{
+        return request(app)
+        .get("/api/characters/83/5")
+        .expect(200)
+        .then(({body})=>{
+            console.log(body)
+        })
+    })
+})
+
 
 
 // describe('GET /api/articles/:article_id', () => {
