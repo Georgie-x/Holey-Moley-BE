@@ -1,5 +1,5 @@
 
-const { getAllUsers, patchUser, addNewUser } = require("../models/users.model");
+const { getAllUsers, updateUser, insertUser } = require("../models/users.model");
 
 exports.getAllUsers = (req, res) => {
 	return getAllUsers()
@@ -13,9 +13,10 @@ exports.getAllUsers = (req, res) => {
 
 exports.patchUser = (req, res) => {
 	const { username } = req.params;
-	console.log(req.body, username);
+	
+console.log(username)
+	return updateUser(username)
 
-	patchUser(req.body, username)
 		.then((response) => {
 			res.status(201).send(response);
 		})
@@ -24,10 +25,9 @@ exports.patchUser = (req, res) => {
 		});
 };
 
-exports.addNewUser = (req, res) => {
-	const { username } = req.params;
-
-	addNewUser(req.body, username)
+exports.postUser = (req, res) => {
+	const { username, logged_in } = req.body;
+	return insertUser(username, logged_in)
 		.then((response) => {
 			res.status(201).send(response);
 		})

@@ -58,10 +58,10 @@ describe("GET /api/results", () => {
 describe("GET /api/results/:username", () => {
 	test("should return a status code of 200 and results array", () => {
 		return request(app)
-			.get("/api/results/Chris")
+			.get("/api/results/Flo")
 			.expect(200)
 			.then(({ body }) => {
-				console.log(body);
+				return body;
 			});
 	});
 });
@@ -97,6 +97,54 @@ describe("GET /api/characters/:show_id/:num", () => {
 			});
 	});
 });
+
+describe("POST /users/", () => {
+	test("should add new user to database", () => {
+
+			const newUser = {username: "barney", logged_in: "true"}
+			return request(app)
+			.post("/api/users/")
+			.send(newUser)
+			.expect(201)
+			.then(({ body }) => {
+				expect(body).toMatchObject({
+					username: "barney",
+					logged_in: true
+				});
+			});
+	});
+});
+
+describe("PATCH /users/:username", () => {
+	test("should change user logged_in status to true in database", () => {
+
+			return request(app)
+			.patch("/api/users/Flo")
+			.expect(201)
+			.then(({ body }) => {
+				expect(body).toMatchObject({
+					username: "Flo",
+					logged_in: true
+				});
+			});
+	});
+});
+
+// .then(({body}) => {
+	//             expect(body.comment).toMatchObject({
+	//                 author: "rogersop",
+	//                 body: expect.any(String),
+	//                 article_id: 13,
+	//                 comment_id: 19,
+	//                 created_at: expect.any(String),
+	//                 votes: 0
+	//             })
+
+// const newComment = { username: "rogersop", body: "Wow, this really is fantastic!" }
+//         return request(app)
+//         .post("/api/articles/13/comments")
+//         .send(newComment)
+//         .expect(201)
 
 // describe('GET /api/articles/:article_id', () => {
 

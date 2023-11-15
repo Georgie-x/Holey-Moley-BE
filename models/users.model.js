@@ -1,34 +1,45 @@
-const db = require("../db/connection")
+const db = require("../db/connection");
 
 exports.getAllUsers = () => {
-  return db.query(`
+	return db
+		.query(
+			`
     SELECT *
-    FROM users;`)
-    .then((result)=>{
-        return result.rows
-    })
-}
+    FROM users;`
+		)
+		.then((result) => {
+			return result.rows;
+		});
+};
 
-exports.addNewUser=(username)=>{
-    return db.query(`
-    INSERT INTO users (username, logged_in)
-    VALUES ($1, $2) RETURNING *
-    `, [username, false])
-    .then(({rows})=>{
-        console.log(rows[0])
-        return rows[0]
-    })
-}
-
-
-exports.patchUser=(username)=>{
-
-    return db.query(`
+exports.updateUser = (username) => {
+	return db
+		.query(
+			`
     UPDATE users SET logged_in = TRUE
-    WHERE username = ${username} RETURNING *;
-    `)
-    .then(({rows})=>{
-        console.log(rows[0])
-        return rows[0]
-    })
-}
+    WHERE username = $1
+    `,
+			[username]
+		)
+		.then(({ rows }) => {
+			console.log(rows);
+			return rows[0];
+		});
+};
+
+exports.insertUser = (username, logged_in) => {
+	console.log(username, logged_in);
+	return db
+		.query(
+			`
+    INSERT INTO users (username, logged_in)
+    VALUES ($2, $3)
+    `,
+			[username, logged_in]
+		)
+		.then(({ rows }) => {
+			return rows[0];
+		});
+};
+
+
