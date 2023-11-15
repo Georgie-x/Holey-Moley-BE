@@ -34,7 +34,7 @@ app.get('/api/characters', getCharacters)
 
 
 
-app.patch('/api/users/:username', patchUser)
+app.patch('/api/users/:username/:status', patchUser)
 
 
 app.post('/api/users/:username', addNewUser)

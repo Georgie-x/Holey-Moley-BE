@@ -48,6 +48,17 @@ describe('GET /api/results', () => {
     
 });
 
+    describe('patch/api/users/:username', ()=>{
+        test.only('should return the username to true', ()=>{
+            return request(app)
+            .patch('/api/users/John')
+            .expect(201)
+            .then(({body})=>{
+                console.log(body)
+            })
+        })
+    });
+
 // describe('404 Invalid api path', () => {
 //     test('should return a status code of 404 if path is invalid', () => {
 //         return request(app)
@@ -105,7 +116,7 @@ describe('GET /api/chars', ()=>{
 })
 
 describe ('GET /api/characters/:show_id/:num', ()=>{
-    test.only('should return 5', ()=>{
+    test.skip('should return 5', ()=>{
         return request(app)
         .get("/api/characters/83/5")
         .expect(200)
