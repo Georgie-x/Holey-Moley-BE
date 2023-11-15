@@ -37,8 +37,8 @@ app.get('/api/characters', getCharacters)
 app.patch('/api/users/:username/:status', patchUser)
 
 
-app.post('/api/users/:username', addNewUser)
-app.post('/api/users/:username', addNewUser)
+app.post('/api/users', addNewUser)
+
 
 
 module.exports = app

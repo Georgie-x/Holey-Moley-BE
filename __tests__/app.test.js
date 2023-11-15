@@ -49,9 +49,15 @@ describe('GET /api/results', () => {
 });
 
     describe('patch/api/users/:username', ()=>{
-        test.only('should return the username to true', ()=>{
+        test('should return the username to true', ()=>{
+            const inputPost = {
+                username: 'john',
+                logged_in: true
+            }
+
             return request(app)
-            .patch('/api/users/John')
+            .post('/api/users')
+            .send(inputPost)
             .expect(201)
             .then(({body})=>{
                 console.log(body)

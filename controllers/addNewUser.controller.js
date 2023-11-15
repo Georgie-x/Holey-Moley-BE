@@ -1,9 +1,12 @@
 const { addNewUser } = require("../models/addNewUser.model");
 
 exports.addNewUser = (req, res) => {
-	const { username } = req.params;
+	const username = req.body.username
+	const logged_in = req.body.logged_in
 
-	addNewUser(req.body, username)
+	console.log(username, logged_in, "addNEW USER PAGE")
+
+	addNewUser(req.body)
 		.then((response) => {
 			res.status(201).send(response);
 		})

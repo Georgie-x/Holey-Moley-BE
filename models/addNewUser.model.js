@@ -1,11 +1,7 @@
 
-exports.addNewUser=(username)=>{
+exports.addNewUser=(username, logged_in)=>{
     return db.query(`
     INSERT INTO users (username, logged_in)
     VALUES ($1, $2) RETURNING *
-    `, [username, false])
-    .then(({rows})=>{
-        console.log(rows[0])
-        return rows[0]
-    })
+    `, [username, logged_in])
 }
