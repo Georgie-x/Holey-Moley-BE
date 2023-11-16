@@ -12,8 +12,9 @@ exports.getAllUsers = (req, res) => {
 };
 
 exports.patchUser = (req, res) => {
-	const { username } = req.params
-	const { logged_in } = req.body
+	const {username}  = req.params
+	const {logged_in}  = req.body
+	console.log(req.params, req.body)
 	return updateUser(username, logged_in)
 
 		.then((response) => {

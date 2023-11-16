@@ -17,8 +17,8 @@ exports.updateUser = (username, logged_in) => {
 	return db
 		.query(
 			`
-    UPDATE users SET logged_in = $2
-    WHERE username = $1::text
+    UPDATE users SET logged_in = $2::boolean
+    WHERE username = $1::varchar
     `,
 			[username, logged_in]
 		)
@@ -35,13 +35,13 @@ exports.insertUser = (username, logged_in) => {
 		.query(
 			`
     INSERT INTO users (username, logged_in)
-    VALUES ($3, $4)
+    VALUES ($1::varchar, $2::boolean)
     `,
 			[username, logged_in]
 		)
-		.then(({ result }) => {
-            console.log(result)
-			return rows[0];
+		.then(({ rows }) => {
+            console.log(rows)
+			return rows[0]
 		}).catch((err) => {
 			console.log(err);
 		});
