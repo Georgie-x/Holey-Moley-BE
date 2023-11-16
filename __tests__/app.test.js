@@ -101,7 +101,7 @@ describe("GET /api/characters/:show_id/:num", () => {
 describe("POST /users/", () => {
 	test("should add new user to database", () => {
 
-			const newUser = {username: "barney", logged_in: "true"}
+			const newUser = {username: "barney", logged_in: true}
 			return request(app)
 			.post("/api/users/")
 			.send(newUser)
@@ -117,13 +117,15 @@ describe("POST /users/", () => {
 
 describe("PATCH /users/:username", () => {
 	test("should change user logged_in status to true in database", () => {
-
+			const newStatus = { logged_in: true}
 			return request(app)
-			.patch("/api/users/Flo")
+			.patch("/api/users/John")
+			.send(newStatus)
 			.expect(201)
 			.then(({ body }) => {
+				console.log(body)
 				expect(body).toMatchObject({
-					username: "Flo",
+					username: "John",
 					logged_in: true
 				});
 			});

@@ -12,18 +12,20 @@ exports.getAllUsers = () => {
 		});
 };
 
-exports.updateUser = (username) => {
+exports.updateUser = (username, logged_in) => {
+    console.log(username, logged_in);
 	return db
 		.query(
 			`
-    UPDATE users SET logged_in = TRUE
-    WHERE username = $1
+    UPDATE users SET logged_in = $2
+    WHERE username = $1::text
     `,
-			[username]
+			[username, logged_in]
 		)
-		.then(({ rows }) => {
-			console.log(rows);
+		.then(({ rows }) => {;
 			return rows[0];
+		}).catch((err) => {
+			console.log(err);
 		});
 };
 
@@ -33,12 +35,15 @@ exports.insertUser = (username, logged_in) => {
 		.query(
 			`
     INSERT INTO users (username, logged_in)
-    VALUES ($2, $3)
+    VALUES ($3, $4)
     `,
 			[username, logged_in]
 		)
-		.then(({ rows }) => {
+		.then(({ result }) => {
+            console.log(result)
 			return rows[0];
+		}).catch((err) => {
+			console.log(err);
 		});
 };
 

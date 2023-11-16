@@ -12,10 +12,9 @@ exports.getAllUsers = (req, res) => {
 };
 
 exports.patchUser = (req, res) => {
-	const { username } = req.params;
-	
-console.log(username)
-	return updateUser(username)
+	const { username } = req.params
+	const { logged_in } = req.body
+	return updateUser(username, logged_in)
 
 		.then((response) => {
 			res.status(201).send(response);
@@ -27,6 +26,7 @@ console.log(username)
 
 exports.postUser = (req, res) => {
 	const { username, logged_in } = req.body;
+	console.log("ni", username, logged_in)
 	return insertUser(username, logged_in)
 		.then((response) => {
 			res.status(201).send(response);
