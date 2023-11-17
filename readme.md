@@ -1,4 +1,4 @@
-This is the backend repo for NC group project by The Viscounts (August 2023 cohort). This repo holds information on users, shows, show characters, games and results for the Holey Moley game.
+This is the backend repo for NC group project by The Viscounts (August 2023 cohort). This repo holds information on users, shows, show characters, games and results for the Holey Moley game. This backend repo is hosted at https://holey-moley.onrender.com
 
 Clone this repo:
     git clone https://github.com/Georgie-x/Holey-Moley-BE.git
@@ -25,6 +25,10 @@ Run tests:
 
 View DB and check tables:
     npm run helper
+
+
+
+
 
 The Holey-Moley frontend repo can be found at:
     https://github.com/Georgie-x/Holey-Moley.git
