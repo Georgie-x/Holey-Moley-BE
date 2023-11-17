@@ -14,11 +14,10 @@ exports.getAllUsers = (req, res) => {
 exports.patchUser = (req, res) => {
 	const {username}  = req.params
 	const {logged_in}  = req.body
-	console.log(req.params, req.body)
+	console.log(username, logged_in)
 	return updateUser(username, logged_in)
-
 		.then((response) => {
-			res.status(201).send(response);
+			res.status(200).send(response);
 		})
 		.catch((err) => {
 			console.log(err);
@@ -27,7 +26,6 @@ exports.patchUser = (req, res) => {
 
 exports.postUser = (req, res) => {
 	const { username, logged_in } = req.body;
-	console.log("ni", username, logged_in)
 	return insertUser(username, logged_in)
 		.then((response) => {
 			res.status(201).send(response);

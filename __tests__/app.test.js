@@ -107,6 +107,7 @@ describe("POST /users/", () => {
 			.send(newUser)
 			.expect(201)
 			.then(({ body }) => {
+				console.log(body)
 				expect(body).toMatchObject({
 					username: "barney",
 					logged_in: true
@@ -121,7 +122,7 @@ describe("PATCH /users/:username", () => {
 			return request(app)
 			.patch("/api/users/John")
 			.send(newStatus)
-			.expect(201)
+			.expect(200)
 			.then(({ body }) => {
 				console.log(body)
 				expect(body).toMatchObject({
