@@ -25,8 +25,8 @@ app.get('/api/results', getAllResults)
 app.get('/api/results/:username', getResultsByUser)
 
 
-
-
+app.post('/api/users/:username', addNewUser)
+app.post('/api/users/:username', addNewUser)
 
 
 module.exports = app
