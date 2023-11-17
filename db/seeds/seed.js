@@ -23,7 +23,7 @@ const seed = ({ userData, showData, charData, gameData, resultData }) => {
 			return db.query(`
       CREATE TABLE users (
         username VARCHAR PRIMARY KEY,
-        logged_in BOOLEAN DEFAULT 'false'
+        logged_in BOOLEAN
         );`);
 		})
 		.then(() => {
